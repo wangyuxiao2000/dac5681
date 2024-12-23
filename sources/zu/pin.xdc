@@ -1,0 +1,63 @@
+# Compress the bit file
+set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
+
+# 7044 clk - 250MHz
+set_property -dict {PACKAGE_PIN AW15 IOSTANDARD LVDS} [get_ports clk_250m_p]
+
+# 7044 SPI
+set_property -dict {PACKAGE_PIN AN22 IOSTANDARD LVCMOS18} [get_ports {rst_7044[0]}]
+set_property -dict {PACKAGE_PIN AP22 IOSTANDARD LVCMOS18} [get_ports cs_7044]
+set_property -dict {PACKAGE_PIN AR23 IOSTANDARD LVCMOS18} [get_ports sck_7044]
+set_property -dict {PACKAGE_PIN AT23 IOSTANDARD LVCMOS18} [get_ports sdio_7044]
+
+# DAC1
+set_property -dict {PACKAGE_PIN BB28 IOSTANDARD LVCMOS18} [get_ports cs_5681_1]
+set_property -dict {PACKAGE_PIN AY25 IOSTANDARD LVCMOS18} [get_ports sck_5681_1]
+set_property -dict {PACKAGE_PIN BA25 IOSTANDARD LVCMOS18} [get_ports sdio_5681_1]
+set_property -dict {PACKAGE_PIN AM10 IOSTANDARD LVDS} [get_ports dac1_sync_p]
+set_property -dict {PACKAGE_PIN AN12 IOSTANDARD LVDS} [get_ports dac1_dclk_p]
+set_property -dict {PACKAGE_PIN AY19 IOSTANDARD LVDS} [get_ports {dac1_data_p[0]}]
+set_property -dict {PACKAGE_PIN AM26 IOSTANDARD LVDS} [get_ports {dac1_data_p[1]}]
+set_property -dict {PACKAGE_PIN BA15 IOSTANDARD LVDS} [get_ports {dac1_data_p[2]}]
+set_property -dict {PACKAGE_PIN AL14 IOSTANDARD LVDS} [get_ports {dac1_data_p[3]}]
+set_property -dict {PACKAGE_PIN BA18 IOSTANDARD LVDS} [get_ports {dac1_data_p[4]}]
+set_property -dict {PACKAGE_PIN AV17 IOSTANDARD LVDS} [get_ports {dac1_data_p[5]}]
+set_property -dict {PACKAGE_PIN AU23 IOSTANDARD LVDS} [get_ports {dac1_data_p[6]}]
+set_property -dict {PACKAGE_PIN AT13 IOSTANDARD LVDS} [get_ports {dac1_data_p[7]}]
+set_property -dict {PACKAGE_PIN BB5  IOSTANDARD LVDS} [get_ports {dac1_data_p[8]}]
+set_property -dict {PACKAGE_PIN AP10 IOSTANDARD LVDS} [get_ports {dac1_data_p[9]}]
+set_property -dict {PACKAGE_PIN AM11 IOSTANDARD LVDS} [get_ports {dac1_data_p[10]}]
+set_property -dict {PACKAGE_PIN AJ14 IOSTANDARD LVDS} [get_ports {dac1_data_p[11]}]
+set_property -dict {PACKAGE_PIN AU11 IOSTANDARD LVDS} [get_ports {dac1_data_p[12]}]
+set_property -dict {PACKAGE_PIN AV9  IOSTANDARD LVDS} [get_ports {dac1_data_p[13]}]
+set_property -dict {PACKAGE_PIN AW11 IOSTANDARD LVDS} [get_ports {dac1_data_p[14]}]
+set_property -dict {PACKAGE_PIN AU18 IOSTANDARD LVDS} [get_ports {dac1_data_p[15]}]
+set_property UNAVAILABLE_DURING_CALIBRATION TRUE [get_ports dac1_dclk_p]
+
+# DAC2
+set_property -dict {PACKAGE_PIN AV28 IOSTANDARD LVCMOS18} [get_ports cs_5681_2]
+set_property -dict {PACKAGE_PIN AR28 IOSTANDARD LVCMOS18} [get_ports sck_5681_2]
+set_property -dict {PACKAGE_PIN AT28 IOSTANDARD LVCMOS18} [get_ports sdio_5681_2]
+set_property -dict {PACKAGE_PIN AR18 IOSTANDARD LVDS} [get_ports dac2_sync_p]
+set_property -dict {PACKAGE_PIN AY15 IOSTANDARD LVDS} [get_ports dac2_dclk_p]
+set_property -dict {PACKAGE_PIN AY17 IOSTANDARD LVDS} [get_ports {dac2_data_p[0]}]
+set_property -dict {PACKAGE_PIN BA13 IOSTANDARD LVDS} [get_ports {dac2_data_p[1]}]
+set_property -dict {PACKAGE_PIN BA10 IOSTANDARD LVDS} [get_ports {dac2_data_p[2]}]
+set_property -dict {PACKAGE_PIN AY12 IOSTANDARD LVDS} [get_ports {dac2_data_p[3]}]
+set_property -dict {PACKAGE_PIN BA11 IOSTANDARD LVDS} [get_ports {dac2_data_p[4]}]
+set_property -dict {PACKAGE_PIN AW17 IOSTANDARD LVDS} [get_ports {dac2_data_p[5]}]
+set_property -dict {PACKAGE_PIN AR17 IOSTANDARD LVDS} [get_ports {dac2_data_p[6]}]
+set_property -dict {PACKAGE_PIN AJ18 IOSTANDARD LVDS} [get_ports {dac2_data_p[7]}]
+set_property -dict {PACKAGE_PIN AT16 IOSTANDARD LVDS} [get_ports {dac2_data_p[8]}]
+set_property -dict {PACKAGE_PIN AT15 IOSTANDARD LVDS} [get_ports {dac2_data_p[9]}]
+set_property -dict {PACKAGE_PIN AJ17 IOSTANDARD LVDS} [get_ports {dac2_data_p[10]}]
+set_property -dict {PACKAGE_PIN AU13 IOSTANDARD LVDS} [get_ports {dac2_data_p[11]}]
+set_property -dict {PACKAGE_PIN AN16 IOSTANDARD LVDS} [get_ports {dac2_data_p[12]}]
+set_property -dict {PACKAGE_PIN AN18 IOSTANDARD LVDS} [get_ports {dac2_data_p[13]}]
+set_property -dict {PACKAGE_PIN AL18 IOSTANDARD LVDS} [get_ports {dac2_data_p[14]}]
+set_property -dict {PACKAGE_PIN AL16 IOSTANDARD LVDS} [get_ports {dac2_data_p[15]}]
+
+# Flyline signal
+set_property -dict {PACKAGE_PIN AW21 IOSTANDARD LVCMOS18} [get_ports {dir[0]}]
+set_property -dict {PACKAGE_PIN AM21 IOSTANDARD LVCMOS18} [get_ports {dac1_reset[0]}]
+set_property -dict {PACKAGE_PIN AM20 IOSTANDARD LVCMOS18} [get_ports {dac2_reset[0]}]

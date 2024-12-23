@@ -1,0 +1,17 @@
+# ==============================================================
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+# Tool Version Limit: 2022.04
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+# ==============================================================
+OPTION psf_version = 2.1;
+
+BEGIN driver spi_regs_spi_regs
+
+ OPTION supported_peripherals = (spi_regs_spi_regs_v1_0 );
+ OPTION driver_state = ACTIVE;
+ OPTION copyfiles = all;
+ OPTION name = spi_regs_spi_regs;
+ OPTION version = 1.0;
+
+END driver
+
